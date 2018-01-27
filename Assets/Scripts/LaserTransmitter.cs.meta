@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: e31ab631e55869b4787d2061c1cdc26c
+timeCreated: 1517062606
+licenseType: Free
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - laserBeam: {fileID: 1003034651162056, guid: 0eeaaa89347585044b787b435ab52f7e,
+      type: 2}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
