@@ -546,37 +546,6 @@ Prefab:
       propertyPath: m_RootOrder
       value: 0
       objectReference: {fileID: 0}
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 93aff8ab42db000f879ea1f40ab0831bf5c55469
-=======
->>>>>>> parent of 93aff8a... merge
-=======
->>>>>>> parent of 93aff8a... merge
-    - target: {fileID: 114575737318113848, guid: 1f11418d2a9aeb84fb10154bb776ee34,
-        type: 2}
-      propertyPath: strengthX
-      value: 0.13
-      objectReference: {fileID: 0}
-    - target: {fileID: 114575737318113848, guid: 1f11418d2a9aeb84fb10154bb776ee34,
-        type: 2}
-      propertyPath: strengthY
-      value: 0.15
-      objectReference: {fileID: 0}
-    - target: {fileID: 114479856804496692, guid: 1f11418d2a9aeb84fb10154bb776ee34,
-        type: 2}
-      propertyPath: fishEyeStrength
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 114479856804496692, guid: 1f11418d2a9aeb84fb10154bb776ee34,
-        type: 2}
-      propertyPath: fishEyeStrenghtMultiplier
-      value: 0.09
-=======
     - target: {fileID: 4787961454024492, guid: 1f11418d2a9aeb84fb10154bb776ee34, type: 2}
       propertyPath: m_LocalPosition.y
       value: -0.86
@@ -589,10 +558,7 @@ Prefab:
         type: 2}
       propertyPath: field of view
       value: 64
->>>>>>> 956afcdef76203f480c0d640d9aedb011a1f9dcf
       objectReference: {fileID: 0}
-=======
->>>>>>> parent of beae2f2... Heeey aah Merge
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 1f11418d2a9aeb84fb10154bb776ee34, type: 2}
   m_IsPrefabParent: 0
