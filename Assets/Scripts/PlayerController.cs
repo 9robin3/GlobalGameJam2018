@@ -39,10 +39,14 @@ public class PlayerController : NetworkBehaviour {
         float RotVert = Input.GetAxis("Vertical") * rotationStrenght;
         float RotHorz = Input.GetAxis("Horizontal") * rotationStrenght;
 
-		if(Vert != 0 || Horz != 0)
-		{
-
-            FindObjectOfType<Canvas>().gameObject.SetActive(false);
+        if (Vert != 0 || Horz != 0)
+        {
+            Canvas canvas;
+            canvas = FindObjectOfType<Canvas>();
+            if (canvas != null)
+            { 
+                 canvas.gameObject.SetActive(false);
+            }
 
             Rigidbody rigidbody = GetComponent<Rigidbody>();
 			rigidbody.velocity = Vector3.zero;
