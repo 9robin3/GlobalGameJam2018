@@ -10,14 +10,16 @@ public class PlayerController : NetworkBehaviour {
     [SerializeField]
     float rotationStrenght = 1;
     private Vector3 startRot;
+    GameObject mainCamera;
 
 	public GameObject ServerPlayer;
-
 	public GameObject signalPrefab;
 
     private void Start()
     {
         startRot = transform.rotation.eulerAngles;
+        mainCamera = Camera.main.gameObject;
+        Debug.Log(mainCamera);
     }
 
     private void Update()
