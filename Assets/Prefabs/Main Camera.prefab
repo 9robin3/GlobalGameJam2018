@@ -38,6 +38,7 @@ GameObject:
   - component: {fileID: 20756555023088286}
   - component: {fileID: 124428586439357152}
   - component: {fileID: 81898458813336150}
+  - component: {fileID: 114288377879906522}
   - component: {fileID: 114645166107825238}
   - component: {fileID: 114575737318113848}
   - component: {fileID: 114204186733798598}
@@ -70,8 +71,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1428843333405380}
   m_LocalRotation: {x: -0.12608781, y: 0, z: -0, w: 0.9920191}
-  m_LocalPosition: {x: 1.36, y: -0.7325158, z: 6.159085}
-  m_LocalScale: {x: 1.6132976, y: 1.5909547, z: 1.2277024}
+  m_LocalPosition: {x: -0.18, y: 0.73, z: 10.21}
+  m_LocalScale: {x: 1.8616905, y: 1.6456351, z: 1.2277024}
   m_Children: []
   m_Father: {fileID: 4170708347804442}
   m_RootOrder: 0
@@ -155,7 +156,24 @@ MonoBehaviour:
     m_PostInfinity: 2
     m_RotationOrder: 0
   curveTime: 2
-  fishEyeStrenghtMultiplier: 0.045
+  fishEyeStrenghtMultiplier: 0.05
+--- !u!114 &114288377879906522
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1777603729904702}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3309686a9fbbe6e42a182d5e0257704c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  intensity: 0.705
+  threshold: 0.929
+  blurSpread: 0.45
+  separableBlurShader: {fileID: 4800000, guid: e97c14fbb5ea04c3a902cc533d7fc5d1, type: 3}
+  contrastCompositeShader: {fileID: 4800000, guid: 273404942eede4ea1883ca1fb2942507,
+    type: 3}
 --- !u!114 &114479856804496692
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -167,8 +185,30 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4769e46f36cc50d4c9ceeafa141ab880, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveStrenght: 0.3
-  smoothStrength: 0.5
+  moveStrenght: 10
+  smoothStrength: 0.4
+  moveBlurStrength: 0.4
+  fishEyeStrength: 0
+  curve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 0
+      inSlope: 2
+      outSlope: 2
+      tangentMode: 0
+    - serializedVersion: 2
+      time: 1.9999697
+      value: -0.0021557808
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
+  curveTime: 2
+  fishEyeStrenghtMultiplier: 0.03
 --- !u!114 &114575737318113848
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -180,8 +220,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4739c22ef73ad62488fe344c8fe9addd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  strengthX: 0.11
-  strengthY: 0.08
+  strengthX: 0.13
+  strengthY: 0.1
   fishEyeShader: {fileID: 4800000, guid: 874ceab4425f64bccb1d14032f4452b1, type: 3}
 --- !u!114 &114645166107825238
 MonoBehaviour:
@@ -195,12 +235,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tweakMode: 0
-  screenBlendMode: 1
+  screenBlendMode: 0
   hdr: 0
-  sepBlurSpread: 8.32
+  sepBlurSpread: 3.4
   useSrcAlphaAsMask: 0
   bloomIntensity: 4
-  bloomThreshold: 0.19
+  bloomThreshold: 0.13
   bloomBlurIterations: 2
   lensflares: 0
   hollywoodFlareBlurIterations: 2

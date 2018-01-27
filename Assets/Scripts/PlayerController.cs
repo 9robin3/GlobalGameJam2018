@@ -19,7 +19,6 @@ public class PlayerController : NetworkBehaviour {
     {
         startRot = transform.rotation.eulerAngles;
         mainCamera = Camera.main.gameObject;
-        Debug.Log(mainCamera);
     }
 
     private void Update()

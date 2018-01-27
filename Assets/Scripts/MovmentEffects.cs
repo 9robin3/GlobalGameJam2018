@@ -100,7 +100,7 @@ namespace UnityStandardAssets.ImageEffects
             float step = smoothStrength * Time.deltaTime;
 
             fejkPos = new Vector3(BGStartPos.x + Horz, BGStartPos.y + Vert);
-            background.transform.position = Vector3.MoveTowards(background.transform.position, fejkPos, step);
+            background.transform.position = Vector2.MoveTowards(background.transform.position, fejkPos, step);
         }
     }
 }
