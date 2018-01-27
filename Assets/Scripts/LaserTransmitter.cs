@@ -50,16 +50,34 @@ public class LaserTransmitter : MonoBehaviour {
 
 		foreach (GameObject g in GameObject.FindGameObjectsWithTag("LaserSender"))
 		{
-			if (g != gameObject && Random.value < 0.01)
+			if (g != gameObject && Random.value < 0.005 && !connectionPoints.Contains(g.transform))
 			{
 				connectionPoints.Add (g.transform);
 
 				GameObject beam = (GameObject)Instantiate (laserBeam, transform.position, Quaternion.identity);
 
+				Color c = Random.ColorHSV (0f, 1f, 1f, 1f, 0.5f, 1f);
+
+				LineRenderer line = beam.GetComponent<LineRenderer> ();
+
+				line.startColor = c;
+				line.endColor = c;
+
+				beams.Add (line);
+
 				beam.transform.parent = transform;
 
-				beams.Add (beam.GetComponent<LineRenderer> ());
+				break;
 			}
+		}
+
+		if (Random.value < 0.005 && beams.Count > 0)
+		{
+			int i = Random.Range (0, beams.Count);
+
+			connectionPoints.RemoveAt (i);
+			Destroy (beams [i].gameObject);
+			beams.RemoveAt (i);
 		}
 	}
 }
