@@ -11,6 +11,8 @@ public class PlayerController : NetworkBehaviour {
     float rotationStrenght = 1;
     private Vector3 startRot;
 
+	public GameObject ServerPlayer;
+
 	public GameObject signalPrefab;
 
     private void Start()
@@ -60,6 +62,8 @@ public class PlayerController : NetworkBehaviour {
 
 	public override void OnStartLocalPlayer()
 	{
-		
+		Destroy (transform.GetChild (0).gameObject);
+		GameObject model = Instantiate (ServerPlayer, transform.position, Quaternion.identity);
+		model.transform.parent = transform;
 	}
 }
