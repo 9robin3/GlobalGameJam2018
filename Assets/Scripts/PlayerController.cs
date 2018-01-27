@@ -57,13 +57,15 @@ public class PlayerController : NetworkBehaviour {
 	[Command]
 	void CmdMakeSignal()
 	{
-        AudioSource signalSound;
+        
         GameObject signal = (GameObject)Instantiate (signalPrefab, transform.position, Quaternion.identity);
+
+        AudioSource signalSound;
         signalSound = gameObject.GetComponent<AudioSource>();
 
         signal.transform.parent = transform;
-		NetworkServer.Spawn (signal);
         signalSound.Play();
+        NetworkServer.Spawn(signal);
     }
 
 	public override void OnStartLocalPlayer()
