@@ -235,7 +235,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 876073857}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 227461547, guid: 870353891bb340e2b2a9c8707e7419ba, type: 3}
+  m_Script: {fileID: 227461547, guid: dc443db3e92b4983b9738c1131f555cb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   manager: {fileID: 0}
@@ -256,7 +256,7 @@ MonoBehaviour:
   m_NetworkPort: 7777
   m_ServerBindToIP: 0
   m_ServerBindAddress: 
-  m_NetworkAddress: localhost
+  m_NetworkAddress: 94.234.170.150
   m_DontDestroyOnLoad: 1
   m_RunInBackground: 1
   m_ScriptCRCCheck: 1
@@ -409,8 +409,8 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  m_Radius: 0.5
-  m_Height: 2
+  m_Radius: 1.33
+  m_Height: 3.92
   m_Direction: 1
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!33 &930449429
@@ -550,6 +550,26 @@ Prefab:
     - target: {fileID: 4170708347804442, guid: 1f11418d2a9aeb84fb10154bb776ee34, type: 2}
       propertyPath: m_RootOrder
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114575737318113848, guid: 1f11418d2a9aeb84fb10154bb776ee34,
+        type: 2}
+      propertyPath: strengthX
+      value: 0.13
+      objectReference: {fileID: 0}
+    - target: {fileID: 114575737318113848, guid: 1f11418d2a9aeb84fb10154bb776ee34,
+        type: 2}
+      propertyPath: strengthY
+      value: 0.15
+      objectReference: {fileID: 0}
+    - target: {fileID: 114479856804496692, guid: 1f11418d2a9aeb84fb10154bb776ee34,
+        type: 2}
+      propertyPath: fishEyeStrength
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 114479856804496692, guid: 1f11418d2a9aeb84fb10154bb776ee34,
+        type: 2}
+      propertyPath: fishEyeStrenghtMultiplier
+      value: 0.09
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 1f11418d2a9aeb84fb10154bb776ee34, type: 2}

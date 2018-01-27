@@ -73,8 +73,8 @@ namespace UnityStandardAssets.ImageEffects
                 fish.strengthX = ((curve.Evaluate(timer) * fishEyeStrenghtMultiplier) * Vert);
                 fish.strengthY = ((curve.Evaluate(timer) * fishEyeStrenghtMultiplier) * Vert);
             } else {
-                fish.strengthX = ((curve.Evaluate(timer) * fishEyeStrenghtMultiplier) * Vert);
-                fish.strengthY = ((curve.Evaluate(timer) * fishEyeStrenghtMultiplier) * Vert);
+                fish.strengthX = ((curve.Evaluate(timer) * fishEyeStrenghtMultiplier) * Horz);
+                fish.strengthY = ((curve.Evaluate(timer) * fishEyeStrenghtMultiplier) * Horz);
             }
         }
 

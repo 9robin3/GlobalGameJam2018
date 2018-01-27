@@ -9,10 +9,5 @@ public class FollowPlayer : MonoBehaviour {
 
     Transform currentPlayer;
 
-    private void Start()
-    {
-        
-    }
-
-
+ 
 }
