@@ -1,64 +1,100 @@
 fileFormatVersion: 2
 guid: a3ddc4206c5aef345ba92440cc1893d9
-timeCreated: 1517058818
+timeCreated: 1517062116
 licenseType: Free
 ModelImporter:
   serializedVersion: 22
   fileIDToRecycleName:
-    100000: pCube1
-    100002: pCylinder1
-    100004: pPipe10
-    100006: pPipe11
-    100008: pPipe12
-    100010: pPipe13
-    100012: pPipe2
-    100014: pPipe4
-    100016: pPipe5
-    100018: pPipe6
-    100020: pPipe7
-    100022: //RootNode
-    100024: Spaceship_body_transform
-    100026: transform10
-    100028: transform11
-    100030: transform12
-    100032: transform13
-    100034: transform14
-    100036: transform15
-    100038: transform16
-    100040: transform17
-    100042: transform18
-    100044: transform19
-    100046: transform9
-    400000: pCube1
-    400002: pCylinder1
-    400004: pPipe10
-    400006: pPipe11
-    400008: pPipe12
-    400010: pPipe13
-    400012: pPipe2
-    400014: pPipe4
-    400016: pPipe5
-    400018: pPipe6
-    400020: pPipe7
-    400022: //RootNode
-    400024: Spaceship_body_transform
-    400026: transform10
-    400028: transform11
-    400030: transform12
-    400032: transform13
-    400034: transform14
-    400036: transform15
-    400038: transform16
-    400040: transform17
-    400042: transform18
-    400044: transform19
-    400046: transform9
+    100000: pCone1
+    100002: pCube1
+    100004: pCylinder1
+    100006: pCylinder2
+    100008: pCylinder3
+    100010: pCylinder4
+    100012: pCylinder5
+    100014: pCylinder6
+    100016: pCylinder7
+    100018: pCylinder8
+    100020: pPipe10
+    100022: pPipe11
+    100024: pPipe12
+    100026: pPipe13
+    100028: pPipe2
+    100030: pPipe4
+    100032: pPipe5
+    100034: pPipe6
+    100036: pPipe7
+    100038: //RootNode
+    100040: Spaceship_body_transform
+    100042: Spaceship_body_transform1
+    100044: transform10
+    100046: transform11
+    100048: transform12
+    100050: transform13
+    100052: transform14
+    100054: transform15
+    100056: transform16
+    100058: transform17
+    100060: transform18
+    100062: transform19
+    100064: transform20
+    100066: transform21
+    100068: transform22
+    100070: transform23
+    100072: transform24
+    100074: transform25
+    100076: transform26
+    100078: transform27
+    100080: transform28
+    100082: transform9
+    400000: pCone1
+    400002: pCube1
+    400004: pCylinder1
+    400006: pCylinder2
+    400008: pCylinder3
+    400010: pCylinder4
+    400012: pCylinder5
+    400014: pCylinder6
+    400016: pCylinder7
+    400018: pCylinder8
+    400020: pPipe10
+    400022: pPipe11
+    400024: pPipe12
+    400026: pPipe13
+    400028: pPipe2
+    400030: pPipe4
+    400032: pPipe5
+    400034: pPipe6
+    400036: pPipe7
+    400038: //RootNode
+    400040: Spaceship_body_transform
+    400042: Spaceship_body_transform1
+    400044: transform10
+    400046: transform11
+    400048: transform12
+    400050: transform13
+    400052: transform14
+    400054: transform15
+    400056: transform16
+    400058: transform17
+    400060: transform18
+    400062: transform19
+    400064: transform20
+    400066: transform21
+    400068: transform22
+    400070: transform23
+    400072: transform24
+    400074: transform25
+    400076: transform26
+    400078: transform27
+    400080: transform28
+    400082: transform9
     2100000: blue_mat
     2100002: red_material
     2100004: lambert1
-    2300000: Spaceship_body_transform
-    3300000: Spaceship_body_transform
-    4300000: Spaceship_body_transform
+    2300000: Spaceship_body_transform1
+    3300000: Spaceship_body_transform1
+    4300000: Spaceship_body_transform1
     9500000: //RootNode
   externalObjects: {}
   materials:
