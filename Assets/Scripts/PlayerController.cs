@@ -41,7 +41,10 @@ public class PlayerController : NetworkBehaviour {
 
 		if(Vert != 0 || Horz != 0)
 		{
-			Rigidbody rigidbody = GetComponent<Rigidbody>();
+
+            FindObjectOfType<Canvas>().gameObject.SetActive(false);
+
+            Rigidbody rigidbody = GetComponent<Rigidbody>();
 			rigidbody.velocity = Vector3.zero;
 			rigidbody.angularVelocity = Vector3.zero;
 			rigidbody.Sleep();
