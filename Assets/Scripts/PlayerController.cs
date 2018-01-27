@@ -12,7 +12,7 @@ public class PlayerController : NetworkBehaviour {
     private Vector3 startRot;
     GameObject mainCamera;
 
-    AudioSource signalSound;
+    
 
     public GameObject ServerPlayer;
 	public GameObject signalPrefab;
@@ -21,7 +21,7 @@ public class PlayerController : NetworkBehaviour {
     {
         startRot = transform.rotation.eulerAngles;
         mainCamera = Camera.main.gameObject;
-        signalSound = gameObject.GetComponent<AudioSource>();
+        
     }
 
     private void Update()
@@ -57,12 +57,14 @@ public class PlayerController : NetworkBehaviour {
 	[Command]
 	void CmdMakeSignal()
 	{
-		GameObject signal = (GameObject)Instantiate (signalPrefab, transform.position, Quaternion.identity);
+        AudioSource signalSound;
+        GameObject signal = (GameObject)Instantiate (signalPrefab, transform.position, Quaternion.identity);
+        signalSound = gameObject.GetComponent<AudioSource>();
 
-        signalSound.Play();
         signal.transform.parent = transform;
 		NetworkServer.Spawn (signal);
-	}
+        signalSound.Play();
+    }
 
 	public override void OnStartLocalPlayer()
 	{
