@@ -4,15 +4,11 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class ChangeSCenes : MonoBehaviour {
-
-    SceneManager sceMan;
-
-
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetKeyDown(KeyCode.Escape)) 
         {
-            SceneManager.LoadScene("CoreGame");
+            Application.Quit();
         }
     }
 
