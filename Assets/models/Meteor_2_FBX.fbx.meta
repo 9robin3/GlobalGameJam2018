@@ -1,6 +1,6 @@
 fileFormatVersion: 2
-guid: e23527aeaf0b0204f888055e81b8d185
-timeCreated: 1517054314
+guid: 1f32ac6c3554e3b4290580a16a338374
+timeCreated: 1517054531
 licenseType: Free
 ModelImporter:
   serializedVersion: 22
@@ -10,7 +10,7 @@ ModelImporter:
     2100000: meteor_material
     2300000: //RootNode
     3300000: //RootNode
-    4300000: Meteor_transform
+    4300000: Meteor_2_transform
     9500000: //RootNode
   externalObjects: {}
   materials:
