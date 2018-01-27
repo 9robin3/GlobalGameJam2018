@@ -31,28 +31,30 @@ public class PlayerController : NetworkBehaviour {
 
     private void movement()
     {
-		if (!isLocalPlayer)
-			return;
-		
+        if (!isLocalPlayer)
+            return;
+
         float Vert = Input.GetAxis("Vertical") * Speed;
         float Horz = Input.GetAxis("Horizontal") * Speed;
         float RotVert = Input.GetAxis("Vertical") * rotationStrenght;
         float RotHorz = Input.GetAxis("Horizontal") * rotationStrenght;
 
-		if(Vert != 0 || Horz != 0)
-		{
-			Rigidbody rigidbody = GetComponent<Rigidbody>();
-			rigidbody.velocity = Vector3.zero;
-			rigidbody.angularVelocity = Vector3.zero;
-			rigidbody.Sleep();
-		}
+        if (Vert != 0 || Horz != 0)
+        {
+            Rigidbody rigidbody = GetComponent<Rigidbody>();
+            rigidbody.velocity = Vector3.zero;
+            rigidbody.angularVelocity = Vector3.zero;
+            rigidbody.Sleep();
+        }
 
         transform.position = new Vector3(transform.position.x + Horz, transform.position.y + Vert, transform.position.z);
         transform.rotation = Quaternion.Euler((startRot.x + RotVert), (startRot.y + RotHorz), startRot.z);
 
         if (Input.GetKeyDown(KeyCode.Space))
+        { 
             CmdPlaySound();
-            CmdMakeSignal ();
+            CmdMakeSignal();
+        }
     }
 
 	[Command]
