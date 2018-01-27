@@ -242,7 +242,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 876073857}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 227461547, guid: dc443db3e92b4983b9738c1131f555cb, type: 3}
+  m_Script: {fileID: 227461547, guid: 870353891bb340e2b2a9c8707e7419ba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   manager: {fileID: 0}
@@ -263,7 +263,7 @@ MonoBehaviour:
   m_NetworkPort: 7777
   m_ServerBindToIP: 0
   m_ServerBindAddress: 
-  m_NetworkAddress: 94.234.170.150
+  m_NetworkAddress: localhost
   m_DontDestroyOnLoad: 1
   m_RunInBackground: 1
   m_ScriptCRCCheck: 1
@@ -418,8 +418,8 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  m_Radius: 1.33
-  m_Height: 3.92
+  m_Radius: 0.5
+  m_Height: 2
   m_Direction: 1
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!33 &930449429
@@ -546,6 +546,17 @@ Prefab:
       propertyPath: m_RootOrder
       value: 0
       objectReference: {fileID: 0}
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 93aff8ab42db000f879ea1f40ab0831bf5c55469
+=======
+>>>>>>> parent of 93aff8a... merge
+=======
+>>>>>>> parent of 93aff8a... merge
     - target: {fileID: 114575737318113848, guid: 1f11418d2a9aeb84fb10154bb776ee34,
         type: 2}
       propertyPath: strengthX
@@ -565,7 +576,23 @@ Prefab:
         type: 2}
       propertyPath: fishEyeStrenghtMultiplier
       value: 0.09
+=======
+    - target: {fileID: 4787961454024492, guid: 1f11418d2a9aeb84fb10154bb776ee34, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: -0.86
       objectReference: {fileID: 0}
+    - target: {fileID: 4787961454024492, guid: 1f11418d2a9aeb84fb10154bb776ee34, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 17.96
+      objectReference: {fileID: 0}
+    - target: {fileID: 20756555023088286, guid: 1f11418d2a9aeb84fb10154bb776ee34,
+        type: 2}
+      propertyPath: field of view
+      value: 64
+>>>>>>> 956afcdef76203f480c0d640d9aedb011a1f9dcf
+      objectReference: {fileID: 0}
+=======
+>>>>>>> parent of beae2f2... Heeey aah Merge
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 1f11418d2a9aeb84fb10154bb776ee34, type: 2}
   m_IsPrefabParent: 0
