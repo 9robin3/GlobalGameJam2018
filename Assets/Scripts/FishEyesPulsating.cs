@@ -33,7 +33,7 @@ namespace UnityStandardAssets.ImageEffects {
             }
 
             fisheyeComponent.strengthX = (curve.Evaluate(timer) * fishEyeStrenghtMultiplier);
-            fisheyeComponent.strengthY = (curve.Evaluate(timer) * fishEyeStrenghtMultiplier);
+            fisheyeComponent.strengthY = (curve.Evaluate(timer) * fishEyeStrenghtMultiplier);   
         }
 
     }
