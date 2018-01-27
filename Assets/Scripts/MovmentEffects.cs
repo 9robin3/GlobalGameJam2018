@@ -37,7 +37,9 @@ namespace UnityStandardAssets.ImageEffects
         private void Awake()
         {
             background = transform.GetChild(0).gameObject;
-            BGStartPos = background.transform.position;
+            BGStartPos = background.transform.localPosition;
+
+            print(background.transform.localPosition);
 
             bloom = GetComponent<BloomAndFlares>();
             bloomStart = bloom.sepBlurSpread;
@@ -87,10 +89,6 @@ namespace UnityStandardAssets.ImageEffects
                 bloom.sepBlurSpread = (bloomStart * Vert);
             else
                 bloom.sepBlurSpread = (bloomStart * Horz);
-
-
-
-
         }
 
         private void backgroundMovment()
@@ -99,8 +97,8 @@ namespace UnityStandardAssets.ImageEffects
             float Horz = Input.GetAxis("Horizontal") * moveStrenght;
             float step = smoothStrength * Time.deltaTime;
 
-            fejkPos = new Vector3(BGStartPos.x + Horz, BGStartPos.y + Vert);
-            background.transform.position = Vector2.MoveTowards(background.transform.position, fejkPos, step);
+            fejkPos = new Vector3(BGStartPos.x + Horz, BGStartPos.y + Vert, BGStartPos.z);
+            background.transform.localPosition = Vector3.MoveTowards(background.transform.localPosition, fejkPos, step);
         }
     }
 }
