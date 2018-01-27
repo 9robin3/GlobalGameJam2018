@@ -51,7 +51,8 @@ public class PlayerController : NetworkBehaviour {
         transform.rotation = Quaternion.Euler((startRot.x + RotVert), (startRot.y + RotHorz), startRot.z);
 
         if (Input.GetKeyDown(KeyCode.Space))
-           CmdMakeSignal ();
+            CmdPlaySound();
+            CmdMakeSignal ();
     }
 
 	[Command]
@@ -59,13 +60,15 @@ public class PlayerController : NetworkBehaviour {
 	{
         
         GameObject signal = (GameObject)Instantiate (signalPrefab, transform.position, Quaternion.identity);
+        signal.transform.parent = transform;
+        NetworkServer.Spawn(signal);
+    }
 
+    void CmdPlaySound()
+    {
         AudioSource signalSound;
         signalSound = gameObject.GetComponent<AudioSource>();
-
-        signal.transform.parent = transform;
         signalSound.Play();
-        NetworkServer.Spawn(signal);
     }
 
 	public override void OnStartLocalPlayer()
