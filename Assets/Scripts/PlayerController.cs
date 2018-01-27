@@ -12,13 +12,16 @@ public class PlayerController : NetworkBehaviour {
     private Vector3 startRot;
     GameObject mainCamera;
 
-	public GameObject ServerPlayer;
+    AudioSource signalSound;
+
+    public GameObject ServerPlayer;
 	public GameObject signalPrefab;
 
     private void Start()
     {
         startRot = transform.rotation.eulerAngles;
         mainCamera = Camera.main.gameObject;
+        signalSound = gameObject.GetComponent<AudioSource>();
     }
 
     private void Update()
@@ -47,8 +50,8 @@ public class PlayerController : NetworkBehaviour {
         transform.position = new Vector3(transform.position.x + Horz, transform.position.y + Vert, transform.position.z);
         transform.rotation = Quaternion.Euler((startRot.x + RotVert), (startRot.y + RotHorz), startRot.z);
 
-		if (Input.GetKeyDown (KeyCode.Space))
-			CmdMakeSignal ();
+        if (Input.GetKeyDown(KeyCode.Space))
+           CmdMakeSignal ();
     }
 
 	[Command]
@@ -56,8 +59,8 @@ public class PlayerController : NetworkBehaviour {
 	{
 		GameObject signal = (GameObject)Instantiate (signalPrefab, transform.position, Quaternion.identity);
 
-		signal.transform.parent = transform;
-
+        signalSound.Play();
+        signal.transform.parent = transform;
 		NetworkServer.Spawn (signal);
 	}
 
