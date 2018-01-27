@@ -51,7 +51,7 @@ public class PlayerController : NetworkBehaviour {
 	[Command]
 	void CmdMakeSignal()
 	{
-		GameObject signal = (GameObject)Instantiate (signalPrefab, transform.position + new Vector3(0,0.4f,0), Quaternion.identity);
+		GameObject signal = (GameObject)Instantiate (signalPrefab, transform.position, Quaternion.identity);
 
 		signal.transform.parent = transform;
 
@@ -60,6 +60,6 @@ public class PlayerController : NetworkBehaviour {
 
 	public override void OnStartLocalPlayer()
 	{
-		GetComponent<MeshRenderer>().material.color = Color.red;
+		
 	}
 }
