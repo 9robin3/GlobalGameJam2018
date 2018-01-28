@@ -39,8 +39,6 @@ namespace UnityStandardAssets.ImageEffects
             background = transform.GetChild(0).gameObject;
             BGStartPos = background.transform.localPosition;
 
-            print(background.transform.localPosition);
-
             bloom = GetComponent<BloomAndFlares>();
             bloomStart = bloom.sepBlurSpread;
 

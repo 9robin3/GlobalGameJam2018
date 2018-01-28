@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.4511044, g: 0.5009104, b: 0.5740411, a: 1}
+  m_IndirectSpecularColor: {r: 0.4511047, g: 0.5009106, b: 0.5740418, a: 1}
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -157,6 +157,16 @@ Prefab:
       propertyPath: emitterZone.y
       value: 11.7
       objectReference: {fileID: 0}
+    - target: {fileID: 114250680575012728, guid: 6c15f5a3221af894f95b37c02dadf7b6,
+        type: 2}
+      propertyPath: m_ServerOnly
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114250680575012728, guid: 6c15f5a3221af894f95b37c02dadf7b6,
+        type: 2}
+      propertyPath: m_LocalPlayerAuthority
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 6c15f5a3221af894f95b37c02dadf7b6, type: 2}
   m_IsPrefabParent: 0
@@ -188,7 +198,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6c70356706e00b544ad5c76eca6e631a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startState: 0
+  startState: 1
 --- !u!114 &876073859
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -203,7 +213,7 @@ MonoBehaviour:
   m_NetworkPort: 7777
   m_ServerBindToIP: 0
   m_ServerBindAddress: 
-  m_NetworkAddress: localhost
+  m_NetworkAddress: 'fe80::104f:e329:fcee:ee8%13:'
   m_DontDestroyOnLoad: 1
   m_RunInBackground: 1
   m_ScriptCRCCheck: 1
@@ -361,6 +371,16 @@ Prefab:
       value: 
       objectReference: {fileID: 1927659367259658, guid: 0782b46115934744e8ced1f58fbd3ad9,
         type: 2}
+    - target: {fileID: 114250680575012728, guid: 6c15f5a3221af894f95b37c02dadf7b6,
+        type: 2}
+      propertyPath: m_ServerOnly
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114250680575012728, guid: 6c15f5a3221af894f95b37c02dadf7b6,
+        type: 2}
+      propertyPath: m_LocalPlayerAuthority
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 6c15f5a3221af894f95b37c02dadf7b6, type: 2}
   m_IsPrefabParent: 0
@@ -486,7 +506,7 @@ Prefab:
     - target: {fileID: 114479856804496692, guid: 1f11418d2a9aeb84fb10154bb776ee34,
         type: 2}
       propertyPath: fishEyeStrenghtMultiplier
-      value: 0.01
+      value: 0.03
       objectReference: {fileID: 0}
     - target: {fileID: 114645166107825238, guid: 1f11418d2a9aeb84fb10154bb776ee34,
         type: 2}
