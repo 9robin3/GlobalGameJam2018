@@ -9,11 +9,18 @@ public class Spawner : NetworkBehaviour {
 
 	public bool goingRight;
 
+	public bool spawning;
+
 	public Vector3 emitterZone;
+
+	void Start()
+	{
+		spawning = false;
+	}
 
 	void Update()
 	{
-		if(Random.Range(0f,1f) < 0.005f)
+		if(Random.Range(0f,1f) < 0.005f && spawning)
 			CmdSpawnSatellite ();
 	}
 
