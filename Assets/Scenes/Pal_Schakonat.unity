@@ -549,11 +549,6 @@ Prefab:
       propertyPath: m_RootOrder
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 114479856804496692, guid: 1f11418d2a9aeb84fb10154bb776ee34,
-        type: 2}
-      propertyPath: fishEyeStrength
-      value: 0.5
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 1f11418d2a9aeb84fb10154bb776ee34, type: 2}
   m_IsPrefabParent: 0
