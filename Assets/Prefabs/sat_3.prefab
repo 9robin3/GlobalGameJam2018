@@ -87,7 +87,7 @@ GameObject:
   - component: {fileID: 114923687693800888}
   m_Layer: 0
   m_Name: sender (1)
-  m_TagString: Untagged
+  m_TagString: LaserSender
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -180,7 +180,7 @@ GameObject:
   - component: {fileID: 114638468233880122}
   m_Layer: 0
   m_Name: sender
-  m_TagString: Untagged
+  m_TagString: LaserSender
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

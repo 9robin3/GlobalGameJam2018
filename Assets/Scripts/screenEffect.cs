@@ -23,7 +23,7 @@ public class screenEffect : MonoBehaviour {
     private void Update()
     {
         timer += Time.deltaTime;
-        startGameTimer = +Time.deltaTime;
+        startGameTimer += Time.deltaTime;
         if (timer >= endTime)
             timer = 0;
 
@@ -42,7 +42,11 @@ public class screenEffect : MonoBehaviour {
 
         if (Input.anyKeyDown && startGameTimer >= 1f)
         {
-            //Start local
+			foreach(object s in GameObject.FindObjectsOfType(typeof(Spawner)))
+			{
+					((Spawner)s).spawning = true;
+			}
+			Destroy (gameObject);
         }
     }
 }

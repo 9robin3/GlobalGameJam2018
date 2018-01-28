@@ -153,8 +153,23 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
+      name: Glass_mat
+    second: {fileID: 2100000, guid: bc0fd0593b9831146995b68bd6adf0fd, type: 3}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
       name: blue_mat
-    second: {fileID: 2100004, guid: 1461d31c2983b30469f2b64bb72a717c, type: 3}
+    second: {fileID: 2100004, guid: 6c75fc8dd39b18847beeeaf238b85d09, type: 3}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: lambert1
+    second: {fileID: 2100004, guid: ce013398359c94745a0cba152c7bfcaf, type: 3}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: red_material
+    second: {fileID: 2100000, guid: 86f249826efedf4418ae76508cad2fa8, type: 3}
   materials:
     importMaterials: 1
     materialName: 0

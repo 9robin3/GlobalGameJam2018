@@ -8,24 +8,11 @@ public class Destructable : NetworkBehaviour
 
 	private bool hasExploded;
 
-	private float delay;
-
 	public GameObject[] explosionPrefabs;
 
 	void Start()
 	{
 		hasExploded = false;
-		delay = 0.01f;
-	}
-
-	void Update()
-	{
-		if (hasExploded)
-		{
-			delay -= Time.deltaTime;
-			if (delay < 0)
-				Destroy (gameObject);
-		}
 	}
 
 	void OnTriggerEnter (Collider other)
@@ -39,7 +26,6 @@ public class Destructable : NetworkBehaviour
 
 	public override void OnNetworkDestroy()
 	{
-		CmdBreak ();
 	}
 
 	[Command]
@@ -55,5 +41,6 @@ public class Destructable : NetworkBehaviour
 			}
 		}
 		hasExploded = true;
+		Destroy (gameObject);
 	}
 }
