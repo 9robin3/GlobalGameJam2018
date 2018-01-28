@@ -10,7 +10,8 @@ public class BreakApart : MonoBehaviour {
 		for (int i = 0; i < transform.childCount; i++)
 		{
 			Transform c = transform.GetChild (i);
-			c.gameObject.GetComponent<Rigidbody> ().AddForce ((c.position - transform.position)*5);
+			c.gameObject.GetComponent<Rigidbody> ().AddForce (gameObject.GetComponent<Rigidbody> ().velocity);
+			c.gameObject.GetComponent<Rigidbody> ().AddForce ((c.position - transform.position)*5 + ((Vector3)Random.insideUnitCircle)*5);
 		}
 
 		transform.DetachChildren ();

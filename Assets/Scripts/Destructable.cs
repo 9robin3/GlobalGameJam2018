@@ -7,12 +7,18 @@ public class Destructable : MonoBehaviour
 
 	public GameObject[] explosionPrefabs;
 
-	void OnTriggerEnter () {
-		foreach (GameObject g in explosionPrefabs)
+	void OnTriggerEnter (Collider other)
+	{
+		if(other.gameObject.GetComponent<Destructable>() == null &&
+			other.gameObject.GetComponent<FadeAway>() == null)
 		{
-			Instantiate (g, transform.position, transform.rotation);
-		}
+			foreach (GameObject g in explosionPrefabs)
+			{
+				GameObject s = Instantiate (g, transform.position, transform.rotation);
+				s.gameObject.GetComponent<Rigidbody> ().velocity = (gameObject.GetComponent<Rigidbody> ().velocity);
+			}
 
-		Destroy (gameObject);
+			Destroy (gameObject);
+		}
 	}
 }

@@ -10,7 +10,7 @@ public class PlayerController : NetworkBehaviour {
     [SerializeField]
     float rotationStrenght = 1;
     private Vector3 startRot;
-    GameObject mainCamera;
+    public GameObject mainCamera;
 
     
 
@@ -54,7 +54,7 @@ public class PlayerController : NetworkBehaviour {
 			rigidbody.Sleep();
 		}
 
-        transform.position = new Vector3(transform.position.x + Horz, transform.position.y + Vert, transform.position.z);
+        transform.position = new Vector3(transform.position.x + Horz, transform.position.y + Vert, 0);
         transform.rotation = Quaternion.Euler((startRot.x + RotVert), (startRot.y + RotHorz), startRot.z);
 
         if (Input.GetKeyDown(KeyCode.Space))
@@ -66,13 +66,10 @@ public class PlayerController : NetworkBehaviour {
 	{
         
         GameObject signal = (GameObject)Instantiate (signalPrefab, transform.position, Quaternion.identity);
-
-        AudioSource signalSound;
-        signalSound = gameObject.GetComponent<AudioSource>();
-
-        signal.transform.parent = transform;
-        signalSound.Play();
+		signal.transform.parent = transform;
         NetworkServer.Spawn(signal);
+
+		gameObject.GetComponent<AudioSource>().Play();
     }
 
 	public override void OnStartLocalPlayer()

@@ -1,50 +1,51 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Networking;
 
-public class Spawner : MonoBehaviour {
+public class Spawner : NetworkBehaviour {
 
-	enum Spawnable {Satellite, Station};
+	public GameObject[] satellitePrefabs;
 
-	public GameObject SatellitePrefab;
+	public bool goingRight;
 
-	public GameObject StationPrefab;
+	public Vector3 emitterZone;
 
-	class SpawnEvent
+	void Update()
 	{
-		public Spawnable toSpawn;
-		public float spawnTime;
-
-		public SpawnEvent(Spawnable s, float t)
-		{
-			toSpawn = s;
-			spawnTime = t;
-		}
+		if(Random.Range(0f,1f) < 0.002f)
+			CmdSpawnSatellite ();
 	}
 
-	// Use this for initialization
-	void Start () {
-		
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
-
-	private void SpawnUnit(Spawnable spawn)
+	[Command]
+	public void CmdSpawnSatellite()
 	{
-		GameObject prefab = null;
-		switch(spawn)
-		{
-		case Spawnable.Satellite:
-			prefab = SatellitePrefab;
-			break;
-		case Spawnable.Station:
-			prefab = StationPrefab;
-			break;
-		}
+		int i = Random.Range (0, satellitePrefabs.Length);
 
-		Instantiate(prefab, transform.position, Quaternion.identity);
+		float x = Random.Range (-0.5f*emitterZone.x, 0.5f*emitterZone.x);
+		float y = Random.Range (-0.5f*emitterZone.y, 0.5f*emitterZone.y);
+		float z = Random.Range (-0.5f*emitterZone.z, 0.5f*emitterZone.z);
+
+		GameObject sat = Instantiate (satellitePrefabs[i], transform.position+new Vector3(x,y,z), Random.rotation);
+
+		if(goingRight)
+			sat.GetComponent<Rigidbody> ().AddForce (Vector3.right*50);
+		else
+			sat.GetComponent<Rigidbody> ().AddForce (Vector3.left*50);
+
+		NetworkServer.Spawn (sat);
 	}
+
+	void OnDrawGizmosSelected()
+	{
+		Gizmos.color = Color.cyan;
+		if(goingRight)
+			Gizmos.DrawWireCube (new Vector3(transform.position.x+50+(0.5f*emitterZone.x), transform.position.y, transform.position.z), new Vector3(100f, emitterZone.y, emitterZone.z));
+		else
+			Gizmos.DrawWireCube (new Vector3(transform.position.x-50-(0.5f*emitterZone.x), transform.position.y, transform.position.z), new Vector3(100f, emitterZone.y, emitterZone.z));
+
+		Gizmos.color = Color.blue;
+		Gizmos.DrawWireCube (transform.position, emitterZone);
+	}
+
 }

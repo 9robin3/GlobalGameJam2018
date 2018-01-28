@@ -50,7 +50,10 @@ public class LaserTransmitter : MonoBehaviour {
 
 		foreach (GameObject g in GameObject.FindGameObjectsWithTag("LaserSender"))
 		{
-			if (g != gameObject && Random.value < 0.005 && !connectionPoints.Contains(g.transform))
+			if (g.transform.parent != transform.parent && 
+				Random.value < 0.005 && 
+				!connectionPoints.Contains(g.transform) && 
+				(g.transform.position - transform.position).magnitude < 20)
 			{
 				connectionPoints.Add (g.transform);
 
@@ -71,7 +74,7 @@ public class LaserTransmitter : MonoBehaviour {
 			}
 		}
 
-		if (Random.value < 0.005 && beams.Count > 0)
+		if (Random.value < 0.02 && beams.Count > 0)
 		{
 			int i = Random.Range (0, beams.Count);
 
