@@ -13,7 +13,7 @@ public class Spawner : NetworkBehaviour {
 
 	void Update()
 	{
-		if(Random.Range(0f,1f) < 0.002f)
+		if(Random.Range(0f,1f) < 0.005f)
 			CmdSpawnSatellite ();
 	}
 
