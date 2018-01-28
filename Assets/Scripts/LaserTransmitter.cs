@@ -39,6 +39,16 @@ public class LaserTransmitter : MonoBehaviour {
 			}
 		}
 	}
+
+	bool HasExistingConnection(GameObject otherSender)
+	{
+		foreach (LaserTransmitter t in transform.parent.gameObject.GetComponentsInChildren<LaserTransmitter>())
+		{
+			if(t.connectionPoints.Contains(otherSender.transform))
+				return true;
+		}
+		return false;
+	}
 	
 	// Update is called once per frame
 	void Update () {
@@ -50,9 +60,10 @@ public class LaserTransmitter : MonoBehaviour {
 
 		foreach (GameObject g in GameObject.FindGameObjectsWithTag("LaserSender"))
 		{
-			if (g.transform.parent != transform.parent && 
-				Random.value < 0.005 && 
+			if (Random.value < 0.005 && 
+				g.transform.parent != transform.parent &&
 				!connectionPoints.Contains(g.transform) && 
+				!HasExistingConnection(g) &&
 				(g.transform.position - transform.position).magnitude < 20)
 			{
 				connectionPoints.Add (g.transform);

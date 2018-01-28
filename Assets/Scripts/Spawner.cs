@@ -28,12 +28,12 @@ public class Spawner : NetworkBehaviour {
 
 		GameObject sat = Instantiate (satellitePrefabs[i], transform.position+new Vector3(x,y,z), Random.rotation);
 
+		NetworkServer.Spawn (sat);
+
 		if(goingRight)
 			sat.GetComponent<Rigidbody> ().AddForce (Vector3.right*50);
 		else
 			sat.GetComponent<Rigidbody> ().AddForce (Vector3.left*50);
-
-		NetworkServer.Spawn (sat);
 	}
 
 	void OnDrawGizmosSelected()
