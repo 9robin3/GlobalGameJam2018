@@ -178,6 +178,12 @@ Prefab:
       value: 
       objectReference: {fileID: 1056179985204542, guid: 524d441880300be4a95b05d3e7652564,
         type: 2}
+    - target: {fileID: 114921770804777766, guid: 6c15f5a3221af894f95b37c02dadf7b6,
+        type: 2}
+      propertyPath: satellitePrefabs.Array.data[0]
+      value: 
+      objectReference: {fileID: 1973039221093100, guid: 532185580f3242f43a46f5b6320f1b29,
+        type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 6c15f5a3221af894f95b37c02dadf7b6, type: 2}
   m_IsPrefabParent: 0
@@ -238,7 +244,7 @@ MonoBehaviour:
   m_OnlineScene: 
   m_SpawnPrefabs:
   - {fileID: 1528846518029576, guid: 078b39690ec36f342856b8499e981d09, type: 2}
-  - {fileID: 1973039221093100, guid: b9be9745d73344c41afcf718bf00558e, type: 2}
+  - {fileID: 0}
   - {fileID: 1927659367259658, guid: 0782b46115934744e8ced1f58fbd3ad9, type: 2}
   m_CustomConfig: 0
   m_MaxConnections: 4
@@ -371,6 +377,12 @@ Prefab:
       propertyPath: satellitePrefabs.Array.data[2]
       value: 
       objectReference: {fileID: 1056179985204542, guid: 524d441880300be4a95b05d3e7652564,
+        type: 2}
+    - target: {fileID: 114921770804777766, guid: 6c15f5a3221af894f95b37c02dadf7b6,
+        type: 2}
+      propertyPath: satellitePrefabs.Array.data[0]
+      value: 
+      objectReference: {fileID: 1973039221093100, guid: 532185580f3242f43a46f5b6320f1b29,
         type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 6c15f5a3221af894f95b37c02dadf7b6, type: 2}
