@@ -149,7 +149,12 @@ ModelImporter:
     3300000: Wing1_transform1
     4300000: Wing1_transform1
     9500000: //RootNode
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: blue_mat
+    second: {fileID: 2100004, guid: 1461d31c2983b30469f2b64bb72a717c, type: 3}
   materials:
     importMaterials: 1
     materialName: 0
