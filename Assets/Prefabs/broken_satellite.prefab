@@ -109,7 +109,6 @@ GameObject:
   - component: {fileID: 4846393492808102}
   - component: {fileID: 114888041689723066}
   - component: {fileID: 54649190461305182}
-  - component: {fileID: 114823306746075898}
   m_Layer: 0
   m_Name: broken_satellite
   m_TagString: Untagged
@@ -1301,6 +1300,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2ae224493e049ce459d116803576daa4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+<<<<<<< HEAD
 --- !u!114 &114823306746075898
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1333,6 +1333,8 @@ MonoBehaviour:
     i15: 48
   m_ServerOnly: 0
   m_LocalPlayerAuthority: 1
+=======
+>>>>>>> 0e73444fa671425fe0fdbb72ba3676bca3da95a6
 --- !u!114 &114888041689723066
 MonoBehaviour:
   m_ObjectHideFlags: 1

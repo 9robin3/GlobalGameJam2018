@@ -111,7 +111,6 @@ GameObject:
   - component: {fileID: 4164489605976558}
   - component: {fileID: 114052050737775518}
   - component: {fileID: 54110373738058582}
-  - component: {fileID: 114771999161676262}
   m_Layer: 0
   m_Name: broken_sat_2
   m_TagString: Untagged
@@ -1207,6 +1206,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 66782b0d2fda69a4ab17578bfeba990e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+<<<<<<< HEAD
 --- !u!114 &114771999161676262
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1239,6 +1239,8 @@ MonoBehaviour:
     i15: 123
   m_ServerOnly: 0
   m_LocalPlayerAuthority: 1
+=======
+>>>>>>> 0e73444fa671425fe0fdbb72ba3676bca3da95a6
 --- !u!114 &114947165845479344
 MonoBehaviour:
   m_ObjectHideFlags: 1
