@@ -157,6 +157,16 @@ Prefab:
       propertyPath: emitterZone.y
       value: 11.7
       objectReference: {fileID: 0}
+    - target: {fileID: 114250680575012728, guid: 6c15f5a3221af894f95b37c02dadf7b6,
+        type: 2}
+      propertyPath: m_ServerOnly
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114250680575012728, guid: 6c15f5a3221af894f95b37c02dadf7b6,
+        type: 2}
+      propertyPath: m_LocalPlayerAuthority
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 6c15f5a3221af894f95b37c02dadf7b6, type: 2}
   m_IsPrefabParent: 0
@@ -211,7 +221,7 @@ MonoBehaviour:
   m_LogLevel: 2
   m_PlayerPrefab: {fileID: 1654179769292362, guid: 64c92f7a8776f614abd4ae4566251a35,
     type: 2}
-  m_AutoCreatePlayer: 1
+  m_AutoCreatePlayer: 0
   m_PlayerSpawnMethod: 0
   m_OfflineScene: 
   m_OnlineScene: 
@@ -361,6 +371,16 @@ Prefab:
       value: 
       objectReference: {fileID: 1927659367259658, guid: 0782b46115934744e8ced1f58fbd3ad9,
         type: 2}
+    - target: {fileID: 114250680575012728, guid: 6c15f5a3221af894f95b37c02dadf7b6,
+        type: 2}
+      propertyPath: m_ServerOnly
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114250680575012728, guid: 6c15f5a3221af894f95b37c02dadf7b6,
+        type: 2}
+      propertyPath: m_LocalPlayerAuthority
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 6c15f5a3221af894f95b37c02dadf7b6, type: 2}
   m_IsPrefabParent: 0
