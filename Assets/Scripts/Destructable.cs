@@ -1,9 +1,8 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.Networking;
 
-public class Destructable : NetworkBehaviour
+public class Destructable : MonoBehaviour
 {
 
 	public GameObject[] explosionPrefabs;
@@ -17,13 +16,11 @@ public class Destructable : NetworkBehaviour
 		}
 	}
 
-	[Command]
 	public void CmdBreak()
 	{
 		foreach (GameObject g in explosionPrefabs)
 		{
 			GameObject s = Instantiate (g, transform.position, transform.rotation);
-			NetworkServer.Spawn (s);
 
 			s.gameObject.GetComponent<Rigidbody> ().velocity = (gameObject.GetComponent<Rigidbody> ().velocity);
 		}
