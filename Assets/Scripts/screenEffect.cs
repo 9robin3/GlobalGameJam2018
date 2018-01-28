@@ -11,6 +11,7 @@ public class screenEffect : MonoBehaviour {
     float endTime;
     Vector3 startScale;
     Vector3 starPos;
+    float startGameTimer;
 
     private void Start()
     {
@@ -22,6 +23,7 @@ public class screenEffect : MonoBehaviour {
     private void Update()
     {
         timer += Time.deltaTime;
+        startGameTimer = +Time.deltaTime;
         if (timer >= endTime)
             timer = 0;
 
@@ -37,5 +39,10 @@ public class screenEffect : MonoBehaviour {
             starPos.y * (curveValue * 0.3f),
             starPos.z * (curveValue * 0.3f)
             );
+
+        if (Input.anyKeyDown && startGameTimer >= 1f)
+        {
+            //Start local
+        }
     }
 }
