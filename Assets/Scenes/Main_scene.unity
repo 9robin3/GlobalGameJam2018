@@ -198,7 +198,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6c70356706e00b544ad5c76eca6e631a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startState: 1
+  startState: 0
 --- !u!114 &876073859
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -213,7 +213,7 @@ MonoBehaviour:
   m_NetworkPort: 7777
   m_ServerBindToIP: 0
   m_ServerBindAddress: 
-  m_NetworkAddress: 192.168.1.44
+  m_NetworkAddress: localhost
   m_DontDestroyOnLoad: 1
   m_RunInBackground: 1
   m_ScriptCRCCheck: 1
@@ -229,8 +229,6 @@ MonoBehaviour:
   - {fileID: 1528846518029576, guid: 078b39690ec36f342856b8499e981d09, type: 2}
   - {fileID: 1973039221093100, guid: b9be9745d73344c41afcf718bf00558e, type: 2}
   - {fileID: 1927659367259658, guid: 0782b46115934744e8ced1f58fbd3ad9, type: 2}
-  - {fileID: 1230536745047278, guid: c2aa2a7564b28cb439b31784d6d7f17b, type: 2}
-  - {fileID: 1134726800080260, guid: ea460ad754ca4b84db79a158f64ac830, type: 2}
   m_CustomConfig: 0
   m_MaxConnections: 4
   m_ConnectionConfig:
